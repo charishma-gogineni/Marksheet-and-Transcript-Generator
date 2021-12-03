@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Transcripts Generator</title>
+		<style>
+	</style>
+		<link rel = "stylesheet" type = "text/css" href="{{ url_for('static',filename='styles/css_file.css') }}">
+	</head>
+	<body>
+		<h1 id="c" style = "font-family:verdana">Transcripts Generator</h1>
+		<br>
+
+		<form method ="post" id="form" action = "/data" enctype ="multipart/form-data">
+			<br>
+			<label for="correct_ans">Enter Range: </label>
+			<input id ="correct_ans" name="range" placeholder="1401cs05-1401cs15">
+
+			<br><br>
+
+			<button for = "1" type ="button">Generate All Transcripts </button>
+                <input type = "radio" id ="1" name = "transcripts" value = "yes">
+                <label for="1">Yes</label>
+                <input type = "radio" id ="2" name = "transcripts" value = "no">
+                <label for="2">No</label>
+			<br><br>
+			<label for="seal"> Upload Seal (Optional) </label>
+			<input type="file" id = "seal" name = "seal">
+
+			<br><br>
+			<label for="sign"> Upload Signature (Optional) </label>
+			<input type="file" id = "sign" name = "sign">
+
+			<br><br>
+			<input type = "submit" name = "submit" value = "submit">
+            <br><br>
+		</form>
+	</body>
+</html>

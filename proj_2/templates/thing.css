@@ -1,0 +1,31 @@
+body{
+	margin-left: 30%;
+	margin-right: 30%;
+	background-color: white;
+	position: relative;
+	vertical-align: middle;
+}
+
+#form{
+	padding: 10px;
+	border-style: solid;
+
+	
+	border-width: 0.5px;
+
+	border-color: black;
+
+	border-radius: 15px;
+	
+	background-color: rgb(248, 234, 186);
+	/* background-attachment: fixed; */
+/*
+	width: 50%;*/
+	background-position: center;
+	box-shadow: 1px 1px 3px #303633;
+}
+
+#c{
+	position: relative;
+	text-align: center;
+}
