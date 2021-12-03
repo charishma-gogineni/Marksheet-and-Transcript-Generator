@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+		<title>Marsheet Generator</title>
+		<style>
+		</style>
+		<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/proj_css.css') }}" title='style'>
+
+    </head>
+
+    <body>
+        <h1 id="c">Marksheet Generator</h1>
+        <p>Instructions:<br>
+            Enter the email, in which concise marksheet should be sent.<br></p>
+        </p><br>
+        <form id='form' method = "post" action = "/data" method = "post" enctype = "multipart/form-data">
+            <br>
+            <label for="master_roll"> Browse for master_roll.csv </label>
+			<input type="file" id = "master_roll" name = "master_roll" accept = ".csv">
+
+			<br><br>
+
+			<label for="responses"> Browse for responses.csv </label>
+			<input type="file" id = "responses" name ="responses" accept = ".csv">
+            <br><br>
+
+            <label for="correct_ans"> Marks for correct answer:</label>
+			<input id ="correct_ans" name="correct_ans">
+
+			<br><br>
+
+			<label for="wrong_ans"> Marks for wrong answer:</label>
+			<input id ="wrong_ans" name="wrong_ans">
+
+			<br><br>
+            <div id="forcenter">
+                <button for = "1" type ="button">Generate roll no wise Marksheet</button>
+                <input type = "radio" id ="1" name = "Generate_roll_no_wise_Marksheet" value = "yes_gr">
+                <label for="1">Yes</label>
+                <input type = "radio" id ="2" name = "Generate_roll_no_wise_Marksheet" value = "no_gr">
+                <label for="2">No</label>
+                <br><br>
+                <button for = "2" type="button">Generate concise Marksheet</button>
+                <input type = "radio" id ="3" name = "Generate_concise_Marksheet" value = "yes_gc">
+                <label for ="3">Yes</label>
+                <input type = "radio" id ="4" name = "Generate_concise_Marksheet" value = "no_gc">
+                <label for ="4">No</label>
+                
+            </div>
+            <br>
+            <label for = "email">Email:</label>
+            <input id = "email" type="email" name = "email">
+            <br><br>
+            
+			
+            <input type = "submit" name = "submit" value = "submit">
+            <br><br>
+        </form>
+    </body>
+</html>
